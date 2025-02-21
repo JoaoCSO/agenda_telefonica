@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+
+<body>
+    <header class="main_title">
+        <h1><img src="assets/contatos_icon.png" alt="Ícone de um telefone"> Agenda de Contatos</h1>
+    </header>
+    <form class="formulario">
+        <h2>Adicionar novo contato</h2>
+        <input type="text" name="nome" class="user_option" id="nome" placeholder="Nome" required
+            pattern="[A-Za-zÀ-ú ]+">
+            <input type="tel" name="phone" class="phone_option" id="phone" placeholder="Telefone" required pattern="(\(\d{2}\)\s?)?\d{4,5}-?\d{4}">
+        <input type="email" name="email" class="mail_option" id="email" placeholder="Email" required>
+        <button type="button" onclick="addContact()">Adicionar</button>
+    </form>
+
+    <h2 class="contacts_title">Lista de Contatos</h2>
+    <table class="table" id="contactTable">
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+            <th>Email</th>
+        </tr>
+    </table>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
